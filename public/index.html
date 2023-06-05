@@ -1,0 +1,574 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>tailwind-cli</title>
+    <link rel="stylesheet" href="./build/tailwind/output.css" />
+  </head>
+  <body class="bg-white">
+    <!-- app bar  -->
+    <div class="justify-between w-screen flex">
+      <nav class="p-3 flex w-screen items-center justify-between">
+        <div class="flex mx-1">
+          <!-- user profile -->
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke-width="1.5"
+            class="w-6 p-0.5 rounded-md bg-green-tint stroke-primary-green h-6"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="M17.982 18.725A7.488 7.488 0 0012 15.75a7.488 7.488 0 00-5.982 2.975m11.963 0a9 9 0 10-11.963 0m11.963 0A8.966 8.966 0 0112 21a8.966 8.966 0 01-5.982-2.275M15 9.75a3 3 0 11-6 0 3 3 0 016 0z"
+            />
+          </svg>
+          <!-- cart -->
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke-width="1.5"
+            class="w-6 p-0.5 rounded-md bg-green-tint stroke-primary-green h-6 mx-2"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="M2.25 3h1.386c.51 0 .955.343 1.087.835l.383 1.437M7.5 14.25a3 3 0 00-3 3h15.75m-12.75-3h11.218c1.121-2.3 2.1-4.684 2.924-7.138a60.114 60.114 0 00-16.536-1.84M7.5 14.25L5.106 5.272M6 20.25a.75.75 0 11-1.5 0 .75.75 0 011.5 0zm12.75 0a.75.75 0 11-1.5 0 .75.75 0 011.5 0z"
+            />
+          </svg>
+          <!-- search (desktop) -->
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke-width="1.5"
+            class="w-6 p-0.5 hidden md:block rounded-md bg-green-tint stroke-primary-green h-6 mx-2"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607z"
+            />
+          </svg>
+        </div>
+        <div class="hidden md:block">
+          <nav class="flex gap-x-2 justify-center items-center mx-2 w-auto p-1">
+            <h3 class="text-xs font-light text-gray-600">تماس با ما</h3>
+            <h3 class="text-xs font-light text-gray-600">شعبه</h3>
+
+            <h3 class="text-xs font-light text-gray-600">درباره ما</h3>
+            <h3 class="text-xs font-light text-gray-600">منو</h3>
+            <h3 class="text-xs font-light text-gray-600">شعبه</h3>
+            <h3
+              class="text-xs font-bold text-primary-green border-primary-green border-b"
+            >
+              صفحه اصلی
+            </h3>
+          </nav>
+        </div>
+
+        <img
+          src="/assets/images/Logo.png"
+          alt="Tarkhine-logo"
+          class="w-16 items-center justify-center mr-3 flex"
+        />
+
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke-width="1.5"
+          class="w-6 p-0.5 md:hidden block stroke-primary-green rounded-md bg-green-tint h-6"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
+          />
+        </svg>
+      </nav>
+    </div>
+
+    <!-- Slider -->
+    <section>
+      <div class="w-full flex justify-center items-center relative">
+        <img
+          src="/assets/images/Slider.png"
+          alt="slider"
+          class="object-cover h-44 w-full"
+        />
+
+        <h3
+          class="absolute text-base md:text-xl top-1/3 w-full justify-center flex items-center font-bold text-white"
+        >
+          تجربه غذای سالم و گیاهی به سبک ترخینه
+        </h3>
+        <button
+          class="text-white text-xs top-1/2 justify-center md:mt-4 flex items-center absolute p-2 w-28 py-2 rounded-md bg-primary-green"
+        >
+          سفارش آنلاین غذا
+        </button>
+        <!-- Slider indicators -->
+
+        <div class="z-20 w-14 h-5 bg-white absolute bottom-0 rounded-t-xl">
+          <div class="relative flex items-center justify-center gap-0.5 mt-2">
+            <button
+              class="rounded-full bg-primary-green w-2 border-green-tint h-2"
+            ></button>
+            <button
+              class="rounded-full hover:bg-primary-green hover:w-2 hover:h-2 bg-slate-300 w-[6px] h-[6px]"
+            ></button>
+            <button
+              class="rounded-full hover:bg-primary-green hover:w-2 hover:h-2 bg-slate-300 w-[6px] h-[6px]"
+            ></button>
+            <button
+              class="rounded-full hover:bg-primary-green hover:w-2 hover:h-2 bg-slate-300 w-[6px] h-[6px]"
+            ></button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- search bar mobile -->
+    <div
+      class="flex md:hidden justify-between text-right border-spacing-1 border p-2 mt-4 mx-3 border-gray-300 rounded-lg h-8 w-auto"
+    >
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        fill="none"
+        viewBox="0 0 24 24"
+        stroke-width="1.5"
+        class="w-4 h-4 stroke-slate-400 justify-center items-center flex"
+      >
+        <path
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607z"
+        />
+      </svg>
+
+      <input
+        type="search"
+        placeholder="...جستجو"
+        class="w-auto flex justify-center items-center text-xs text-right"
+      />
+    </div>
+
+    <!-- Menu -->
+    <section
+      class="flex flex-col gap-y-2 px-4 justify-center items-center w-full h-full"
+    >
+      <h3
+        class="justify-center my-4 font-bold text-light-black text-xs md:text-sm w-full flex items-center"
+      >
+        منوی رستوران
+      </h3>
+      <div
+        class="grid grid-cols-2 col md:flex md:flex-row row-span-2 gap-y-12 justify-center items-center grid-rows-2 w-full mx-4 h-auto"
+      >
+        <div class="h-32 relative w-full">
+          <div class="w-full h-full flex justify-center items-center mx-auto">
+            <img
+              src="/assets/images/homePage/pishqaza2.png"
+              alt="پیش غذا"
+              class="w-32 z-50 -top-12 absolute flex items-center justify-center"
+            />
+            <div
+              class="w-[80%] h-20 bg-transparent absolute top-4 border-spacing-1 border z-40 border-primary-green rounded-lg"
+            ></div>
+            <div
+              class="absolute z-50 justify-center flex bg-transparent w-full h-9"
+            >
+              <button
+                class="bg-primary-green rounded-md text-white font-light absolute text-xs z-50 -bottom-6 h-8 w-18"
+              >
+                پیش غذا
+              </button>
+            </div>
+          </div>
+        </div>
+        <div class="h-32 relative w-full">
+          <div class="h-32 relative w-full">
+            <div class="w-full h-full flex justify-center items-center mx-auto">
+              <img
+                src="/assets/images/homePage/qazaasli.png"
+                alt="noshidani"
+                class="w-32 z-50 -top-10 absolute flex items-center justify-center"
+              />
+              <div
+                class="w-[80%] h-20 bg-transparent absolute top-4 border-spacing-1 border z-40 border-primary-green rounded-lg"
+              ></div>
+              <div
+                class="absolute z-50 justify-center flex bg-transparent w-full h-9"
+              >
+                <button
+                  class="bg-primary-green rounded-md text-white font-light absolute text-xs z-50 -bottom-6 h-8 w-18"
+                >
+                  غذای اصلی
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="h-32 relative w-full">
+          <div class="w-full h-full flex justify-center items-center mx-auto">
+            <img
+              src="/assets/images/homePage/nushidani2.png"
+              alt="noshidani"
+              class="w-28 z-50 -top-14 mb-2 absolute flex items-center justify-center"
+            />
+            <div
+              class="w-[80%] h-20 bg-transparent absolute top-4 border-spacing-1 border z-40 border-primary-green rounded-lg"
+            ></div>
+            <div
+              class="absolute z-50 justify-center flex bg-transparent w-full h-9"
+            >
+              <button
+                class="bg-primary-green rounded-md text-white font-light absolute text-xs z-50 -bottom-6 h-8 w-18"
+              >
+                نوشیدنی
+              </button>
+            </div>
+          </div>
+        </div>
+        <div class="h-32 relative w-full">
+          <div class="w-full h-full flex justify-center items-center mx-auto">
+            <img
+              src="/assets/images/homePage/deser2.png"
+              alt="deser"
+              class="w-32 z-50 -top-12 absolute flex items-center justify-center"
+            />
+            <div
+              class="w-[80%] h-20 bg-transparent absolute top-4 border-spacing-1 border z-40 border-primary-green rounded-lg"
+            ></div>
+            <div
+              class="absolute z-50 justify-center flex bg-transparent w-full h-9"
+            >
+              <button
+                class="bg-primary-green rounded-md text-white font-light absolute text-xs z-50 -bottom-6 h-8 w-18"
+              >
+                دسر
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- about -->
+    <section>
+      <div class="w-full h-96 md:h-48 relative">
+        <img
+          src="/assets/images/homePage/Introduction.png"
+          alt="about"
+          class="object-cover brightness-75 w-full z-30 h-full"
+        />
+        <div
+          class="flex absolute bottom-[60%] md:top-6 right-0 flex-col md:flex-row h-24 md:w-auto w-full"
+        >
+          <div class="hidden md:block pl-4">
+            <div
+              class="grid md:flex-1 grid-cols-2 grid-rows-2 mt-4 h-full gap-x-4 gap-y-3"
+            >
+              <div class="flex flex-col items-center justify-center w-auto">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke-width="1.5"
+                  class="w-7 h-7 flex hover:stroke-white justify-center stroke-gray-600"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M15.75 6a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0zM4.501 20.118a7.5 7.5 0 0114.998 0A17.933 17.933 0 0112 21.75c-2.676 0-5.216-.584-7.499-1.632z"
+                  />
+                </svg>
+                <h1
+                  class="text-xs mt-1 font-light flex justify-center text-white"
+                >
+                  پرسنلی مجرب و حرفه ای
+                </h1>
+              </div>
+
+              <div class="flex flex-col items-center justify-center w-auto">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke-width="1.5"
+                  class="w-7 h-7 flex justify-center stroke-white"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M15.75 6a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0zM4.501 20.118a7.5 7.5 0 0114.998 0A17.933 17.933 0 0112 21.75c-2.676 0-5.216-.584-7.499-1.632z"
+                  />
+                </svg>
+                <h1
+                  class="text-xs mt-1 font-light flex justify-center text-white"
+                >
+                  کیفیت بالای غذاها
+                </h1>
+              </div>
+
+              <div
+                class="flex flex-col h-auto items-center justify-center w-auto"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke-width="1.5"
+                  class="w-7 h-7 flex justify-center hover:stroke-white stroke-gray-600"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M15.75 6a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0zM4.501 20.118a7.5 7.5 0 0114.998 0A17.933 17.933 0 0112 21.75c-2.676 0-5.216-.584-7.499-1.632z"
+                  />
+                </svg>
+                <h1
+                  class="text-xs mt-1 font-light flex justify-center text-white"
+                >
+                  محیطی دلنشین و آرام
+                </h1>
+              </div>
+              <div class="flex flex-col items-center justify-center w-auto">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke-width="1.5"
+                  class="w-7 h-7 flex justify-center hover:stroke-white stroke-gray-600"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M15.75 6a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0zM4.501 20.118a7.5 7.5 0 0114.998 0A17.933 17.933 0 0112 21.75c-2.676 0-5.216-.584-7.499-1.632z"
+                  />
+                </svg>
+                <h1
+                  class="text-xs mt-1 font-light flex justify-center text-white"
+                >
+                  منوی متنوع
+                </h1>
+              </div>
+            </div>
+          </div>
+
+          <div
+            class="flex-1 w-auto bg-transparent md:w-auto flex flex-col gap-y-2 text-right gap-3"
+          >
+            <h3 class="text-sm bg-transparent w-full pr-3 mb-1 text-white">
+              رستوران های زنجیره ای ترخینه
+            </h3>
+            <h4 class="text-xs mx-3 font-light text-white">
+              مهمان‌نوازی یکی از مهم‌ترین مشخصه‌های ایرانیان است و باعث افتخار
+              ماست که بیش از 20 سال است خدمت‌گزار مردم شریف ایران هستیم. ما در
+              رستوران‌های زنجیره‌ای ترخینه همواره تلاش کردیم که در محیطی اصیل بر
+              پایه معماری و طراحی مدرن در کنار طبیعتی دلنواز، غذایی سالم و درخور
+              شان شما عزیزان ارائه دهیم.
+            </h4>
+            <button
+              class="border border-white hover:bg-white hover:text-black hover:font-bold font-light rounded-md ml-3 mt-3 p-2 w-36 text-xs text-white"
+            >
+              اطلاعات بیشتر
+            </button>
+          </div>
+
+          <div
+            class="grid md:hidden grid-cols-2 grid-rows-2 mt-4 h-full gap-x-4 gap-y-3"
+          >
+            <div class="flex flex-col items-center justify-center w-auto">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke-width="1.5"
+                class="w-7 h-7 flex justify-center hover:stroke-white stroke-gray-600"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M15.75 6a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0zM4.501 20.118a7.5 7.5 0 0114.998 0A17.933 17.933 0 0112 21.75c-2.676 0-5.216-.584-7.499-1.632z"
+                />
+              </svg>
+              <h1
+                class="text-xs mt-1 font-light flex justify-center text-white"
+              >
+                پرسنلی مجرب و حرفه ای
+              </h1>
+            </div>
+
+            <div class="flex flex-col items-center justify-center w-auto">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke-width="1.5"
+                class="w-7 h-7 flex justify-center stroke-white"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M15.75 6a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0zM4.501 20.118a7.5 7.5 0 0114.998 0A17.933 17.933 0 0112 21.75c-2.676 0-5.216-.584-7.499-1.632z"
+                />
+              </svg>
+              <h1
+                class="text-xs mt-1 font-light flex justify-center text-white"
+              >
+                کیفیت بالای غذاها
+              </h1>
+            </div>
+
+            <div
+              class="flex flex-col h-auto items-center justify-center w-auto"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke-width="1.5"
+                class="w-7 h-7 flex justify-center hover:stroke-white stroke-gray-600"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M15.75 6a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0zM4.501 20.118a7.5 7.5 0 0114.998 0A17.933 17.933 0 0112 21.75c-2.676 0-5.216-.584-7.499-1.632z"
+                />
+              </svg>
+              <h1
+                class="text-xs mt-1 font-light flex justify-center text-white"
+              >
+                محیطی دلنشین و آرام
+              </h1>
+            </div>
+            <div class="flex flex-col items-center justify-center w-auto">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke-width="1.5"
+                class="w-7 h-7 flex justify-center hover:stroke-white stroke-gray-600"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M15.75 6a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0zM4.501 20.118a7.5 7.5 0 0114.998 0A17.933 17.933 0 0112 21.75c-2.676 0-5.216-.584-7.499-1.632z"
+                />
+              </svg>
+              <h1
+                class="text-xs mt-1 font-light flex justify-center text-white"
+              >
+                منوی متنوع
+              </h1>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- branchs-->
+    <section class="flex mb-5 flex-col justify-center w-full h-auto">
+      <h1
+        class="flex text-black text-lg mt-5 justify-center font-semibold w-full"
+      >
+        ترخینه گردی
+      </h1>
+      <div class="flex w-full mt-3 px-4 flex-col gap-y-3 h-full justify-center">
+        <div
+          class="flex flex-1 w-full h-18 rounded-md border border-primary-green"
+        >
+          <div class="flex flex-col justify-center p-3 items-center">
+            <h1
+              class="font-normal flex justify-center items-center text-base my-3 text-black"
+            >
+              شعبه ی اکباتان
+            </h1>
+            <h3 class="font-light w-full text-center mb-2 text-xs">
+              شهرک اکباتان، فاز ۳، مجتمع تجاری کوروش، طبقه سوم
+            </h3>
+          </div>
+          <img src="/assets/images/homePage/branch-1.png" class="w-1/2" />
+        </div>
+
+        <div
+          class="flex flex-1 w-full h-18 rounded-md border border-primary-green"
+        >
+          <div class="flex flex-col justify-center p-3 items-center">
+            <h1
+              class="font-normal flex justify-center items-center mb-2 text-base text-black"
+            >
+              شعبه چالوس
+            </h1>
+            <h3 class="font-light w-full text-center mb-2 relative text-xs">
+              چالوس، خیابان ۱۷ شهریور، بعد کوچه کوروش، جنب داروخانه دکتر میلانی
+            </h3>
+          </div>
+          <img src="/assets/images/homePage/branch-2.png" class="w-1/2" />
+        </div>
+
+        <div
+          class="flex flex-1 w-full h-18 rounded-md border border-primary-green"
+        >
+          <div class="flex flex-col justify-center p-3 items-center">
+            <h1
+              class="font-normal flex justify-center items-center text-base my-3 text-black"
+            >
+              شعبه اقدسیه
+            </h1>
+            <h3 class="font-light w-full text-center mb-2 text-xs">
+              خیابان اقدسیه ، نرسیده به میدان خیام، پلاک ۸
+            </h3>
+          </div>
+          <img src="/assets/images/homePage/branch-3.png" class="w-1/2" />
+        </div>
+        <div
+          class="flex flex-1 w-full h-18 rounded-md border border-primary-green"
+        >
+          <div class="flex flex-col justify-center p-3 items-center">
+            <h1
+              class="font-normal flex justify-center items-center text-base my-3 text-black"
+            >
+              شعبه ونک
+            </h1>
+            <h3 class="font-light w-full text-center mb-2 text-xs">
+              میدان ونک، خیابان فردوسی، نبش کوچه نیلوفر، پلاک ۲۶
+            </h3>
+          </div>
+          <img src="/assets/images/homePage/branch-4.png" class="w-1/2" />
+        </div>
+      </div>
+    </section>
+
+    <!-- footer -->
+    <section class="w-full flex justify-center items-center relative">
+      <img
+        src="/assets/images/homePage/Footer.png"
+        alt="footer "
+        class="object-cover w-full"
+      />
+      <div class="flex absolute justify-center text-white inset-0 gap-x-8">
+        <div class="mt-5">
+          <h1 class="text-sm">شعبه های ترخینه</h1>
+          <h1 class="text-xs font-light text-center mt-2">شعبه ی اکباتان</h1>
+          <h1 class="text-xs font-light text-center mt-1">شعبه ی چالوس</h1>
+          <h1 class="text-xs font-light text-center mt-1">شعبه ی اقدسیه</h1>
+          <h1 class="text-xs font-light text-center mt-1">شعبه ی ونک</h1>
+        </div>
+        <div class="mt-5">
+          <h1 class="text-sm">دسترسی آسان</h1>
+          <h1 class="text-xs font-light text-center mt-2">پرسش های متداول</h1>
+          <h1 class="text-xs font-light text-center mt-1">قوانین ترخینه</h1>
+          <h1 class="text-xs font-light text-center mt-1">حریم خصوصی</h1>
+          <h1 class="text-xs font-light text-center mt-1">ایکون</h1>
+        </div>
+      </div>
+    </section>
+  </body>
+</html>
